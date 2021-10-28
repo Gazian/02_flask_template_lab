@@ -11,6 +11,8 @@
     <input type="text" name="guests" id="guests">
     <label for="Location">Event Location</label>
     <input type="text" name="location" id="location">
+    <label for="recurring">Event Recurs</label>
+    <input type="checkbox" name="recurring" id="recurring">
     <label for="description">Description</label>
     <textarea name="description" rows="2" cols="30"></textarea>
     <input type="submit" value="Add Event">
@@ -21,11 +23,14 @@
     {% for event in events %}
     <div>
         <p>
-           <b>{{ event.date }} {{ event.name }} :</b>
+           <b>{{ event.date }} {{ event.name }} </b>
+           {% if event.recurring %}
+           <span>&#128260</span>
+          {% endif %}
            <br>
            Guest Number: {{ event.no_of_guests }} - Location: {{ event.room_location }}
            <br>
-           {{ event.description}}
+           {{ event.description }}
         </p>
     </div>
     {% endfor %}
