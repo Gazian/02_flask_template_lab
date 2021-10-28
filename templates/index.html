@@ -2,13 +2,28 @@
 
 {%block content %}
 <h1>My Events List</h1>
+<form action="/events" method="post">
+    <label for="date">Event Date</label>
+    <input type="text" date="date" id="date">
+    <label for="name">Event Name</label>
+    <input type="text" name="name" id="name">
+    <label for="guests">Number of Guests</label>
+    <input type="text" guests="guests" id="guests">
+    <label for="location">Location</label>
+    <input type="text" location="location" id="location">
+    <label for="description">Description</label>
+    <textarea name="description" rows="2" cols="30"></textarea>
+    <input type="submit" value="Add Event">
+    
+  </form>
+  <br>
 
     {% for event in events %}
     <div>
         <p>
            <b>{{ event.date }} {{ event.name }} :</b>
            <br>
-           {{ event.no_of_guests }} - {{ event.room_location }}
+           Guest Number: {{ event.no_of_guests }} - Location: {{ event.room_location }}
            <br>
            {{ event.description}}
         </p>

@@ -6,3 +6,7 @@ from models.event import Event
 @app.route('/events')
 def index():
     return render_template('index.html', title='Home', events = events)
+
+@app.route('/events', methods=['POST'])
+def add_event():
+    return done
