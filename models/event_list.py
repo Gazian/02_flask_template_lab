@@ -5,3 +5,6 @@ event_2 = Event("20/12/2021", "Christmas Feast", 100, "Rooftop Terrace", "Festiv
 
 events =[event_1,event_2]
 
+def add_new_event(event):
+    events.append(event)
+

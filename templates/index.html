@@ -4,13 +4,13 @@
 <h1>My Events List</h1>
 <form action="/events" method="post">
     <label for="date">Event Date</label>
-    <input type="text" date="date" id="date">
+    <input type="text" name="date" id="date">
     <label for="name">Event Name</label>
     <input type="text" name="name" id="name">
     <label for="guests">Number of Guests</label>
-    <input type="text" guests="guests" id="guests">
-    <label for="location">Location</label>
-    <input type="text" location="location" id="location">
+    <input type="text" name="guests" id="guests">
+    <label for="Location">Event Location</label>
+    <input type="text" name="location" id="location">
     <label for="description">Description</label>
     <textarea name="description" rows="2" cols="30"></textarea>
     <input type="submit" value="Add Event">
